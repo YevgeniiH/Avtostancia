@@ -1,4 +1,4 @@
-package ua.cn.kp.dao;
+package ua.cn.kp.domain;
 
 import java.time.LocalDate;
 
@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER")
-public class UserDAO {
+public class User {
 	
 	
 	@Id

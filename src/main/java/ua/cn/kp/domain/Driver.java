@@ -1,4 +1,4 @@
-package ua.cn.kp.dao;
+package ua.cn.kp.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "DRIVER")
-public class DriverDAO {
+public class Driver {
 	
 	@Column(name = "busNmb")
 	private String busNmb;

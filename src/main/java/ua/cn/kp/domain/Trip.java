@@ -1,4 +1,4 @@
-package ua.cn.kp.dao;
+package ua.cn.kp.domain;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "TRIP")
-public class TripDAO {
+public class Trip {
 	
 	@Id
 	@Column(name = "id_trip")

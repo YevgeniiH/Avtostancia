@@ -1,4 +1,4 @@
-package ua.cn.kp.dao;
+package ua.cn.kp.domain;
 
 import java.awt.Image;
 
@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "BUS")
-public class BusDAO {
+public class Bus {
 	
 	@Column(name = "busNmb")
 	private String busNmb;

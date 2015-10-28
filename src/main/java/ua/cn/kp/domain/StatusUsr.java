@@ -1,4 +1,4 @@
-package ua.cn.kp.dao;
+package ua.cn.kp.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "STATUS_USR")
-public class StatusUsrDAO {
+public class StatusUsr {
 	
 	@Id
 	@Column(name = "id_status")
