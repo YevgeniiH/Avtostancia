@@ -2,18 +2,11 @@ package ua.cn.kp.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "COMPANY_INFO")
-public class CompInfo {
-	
-	@Id
-	@Column(name = "id_comp")
-	@GeneratedValue
-	private Integer id_comp;
+public class CompInfo extends Base{
 	
 	@Column(name = "nameComp")
 	private String nameComp;
@@ -26,14 +19,6 @@ public class CompInfo {
 	
 	@Column(name = "insurer")
 	private String insurer;
-
-	public Integer getId_comp() {
-		return id_comp;
-	}
-
-	public void setId_comp(Integer id_comp) {
-		this.id_comp = id_comp;
-	}
 
 	public String getNameComp() {
 		return nameComp;

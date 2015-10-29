@@ -2,29 +2,14 @@ package ua.cn.kp.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "STATUS_USR")
-public class StatusUsr {
-	
-	@Id
-	@Column(name = "id_status")
-	@GeneratedValue
-	private Integer id_status;
+public class StatusUsr extends Base{
 	
 	@Column(name = "statusU")
 	private String statusU;
-
-	public Integer getId_status() {
-		return id_status;
-	}
-
-	public void setId_status(Integer id_status) {
-		this.id_status = id_status;
-	}
 
 	public String getStatusU() {
 		return statusU;

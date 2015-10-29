@@ -5,18 +5,11 @@ import java.time.LocalTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "TRIP")
-public class Trip {
-	
-	@Id
-	@Column(name = "id_trip")
-	@GeneratedValue
-	private Integer id_trip;
+public class Trip extends Base{
 	
 	@Column(name = "tFrom")
 	private String tFrom;
@@ -38,14 +31,6 @@ public class Trip {
 	
 	@Column(name = "price")
 	private Double price;
-
-	public Integer getId_trip() {
-		return id_trip;
-	}
-
-	public void setId_trip(Integer id_trip) {
-		this.id_trip = id_trip;
-	}
 
 	public String gettFrom() {
 		return tFrom;

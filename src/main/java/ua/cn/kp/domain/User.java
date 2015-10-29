@@ -4,19 +4,11 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER")
-public class User {
-	
-	
-	@Id
-	@Column(name = "id")
-	@GeneratedValue
-	private Integer id;
+public class User extends Base{
 	
 	@Column(name = "dob")
 	private LocalDate dob;
@@ -41,14 +33,6 @@ public class User {
 	
 	@Column(name = "role")
 	private String role;
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public LocalDate getDob() {
 		return dob;
