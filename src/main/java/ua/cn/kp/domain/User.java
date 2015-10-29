@@ -39,8 +39,8 @@ public class User {
 	@Column(name = "tel")
 	private Long tel;
 	
-	@Column(name = "status")
-	private String status;
+	@Column(name = "role")
+	private String role;
 
 	public Integer getId() {
 		return id;
@@ -107,11 +107,11 @@ public class User {
 	}
 
 	public String getStatus() {
-		return status;
+		return role;
 	}
 
 	public void setStatus(String status) {
-		this.status = status;
+		this.role = status;
 	}
 	
 }

@@ -4,11 +4,18 @@ import java.awt.Image;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "BUS")
 public class Bus {
+	
+	@Id
+	@Column(name = "id_bus")
+	@GeneratedValue
+	private Integer id_bus;
 	
 	@Column(name = "busNmb")
 	private String busNmb;
@@ -21,6 +28,14 @@ public class Bus {
 	
 	@Column(name = "busLayout")
 	private Image busLayout;
+
+	public Integer getId_bus() {
+		return id_bus;
+	}
+
+	public void setId_bus(Integer id_bus) {
+		this.id_bus = id_bus;
+	}
 
 	public String getBusNmb() {
 		return busNmb;

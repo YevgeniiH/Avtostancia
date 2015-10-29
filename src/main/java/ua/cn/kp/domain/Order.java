@@ -15,6 +15,9 @@ public class Order {
 	@GeneratedValue
 	private Integer id_order;
 	
+	@Column(name = "id_trip")
+	private Integer id_trip;
+	
 	@Column(name = "place")
 	private Integer place;
 	
@@ -27,6 +30,14 @@ public class Order {
 
 	public void setId_order(Integer id_order) {
 		this.id_order = id_order;
+	}
+
+	public Integer getId_trip() {
+		return id_trip;
+	}
+
+	public void setId_trip(Integer id_trip) {
+		this.id_trip = id_trip;
 	}
 
 	public Integer getPlace() {
