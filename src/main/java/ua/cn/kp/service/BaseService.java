@@ -7,38 +7,40 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import ua.cn.kp.domain.Base;
 
-@SuppressWarnings("unchecked")
 public class BaseService<T extends Base> implements IBaseService<T>{
 	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	public void add(T t) {
-		// TODO Auto-generated method stub
-		sessionFactory.getCurrentSession().save(t);
+		sessionFactory.getCurrentSession().persist(t);
 	}
 
+	@SuppressWarnings("unchecked")
 	public void del(Integer id) {
-		// TODO Auto-generated method stub
-		
+		T t = (T) sessionFactory.getCurrentSession().load(getClass(), new Integer(id));
+        if(null != t){
+        	sessionFactory.getCurrentSession().delete(t);
+        }
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public T get(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+	public T get(Integer id) {   
+		T t = (T) sessionFactory.getCurrentSession().load(getClass(), new Integer(id));
+		return t;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<T> list() {
-		// TODO Auto-generated method stub
-		return null;
+		List<T> tList = sessionFactory.getCurrentSession().createQuery("from T").list();
+		return tList;
 	}
 
 	@Override
 	public void edit(T t) {
-		// TODO Auto-generated method stub
-		
+		sessionFactory.getCurrentSession().update(t);
 	}
 
 	

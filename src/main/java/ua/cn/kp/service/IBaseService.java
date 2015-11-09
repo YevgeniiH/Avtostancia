@@ -10,10 +10,10 @@ public interface IBaseService<T extends Base> {
 	
 	public void del(Integer id);
 	
+	public void edit(T t);
+	
 	public T get(Integer id);
 	
 	public List<T> list();
-	
-	public void edit(T t);
 	
 }
